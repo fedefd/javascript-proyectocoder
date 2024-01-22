@@ -1,0 +1,52 @@
+$main-color-text: rgb(240, 237, 237);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color-text;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.containerbox {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@mixin mq-md {
+  @media (min-width: 768px) {
+
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media (min-width: 1200px) {
+
+    @content;
+  }
+}

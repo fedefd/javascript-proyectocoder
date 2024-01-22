@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>MyShowList</title>
+</head>
+
+<body>
+  <div id="fondo-borroso" class="fondo-borroso" onclick="ocultarFormulario()"></div>
+  <header>
+    <div class="header-upper">
+      <h1>MyShowList</h1>
+
+      <ul>
+        <li>idioma</li>
+        <li><button onclick="mostrarFormulario('signup')">registrarse</button></li>
+        <li><button onclick="mostrarFormulario('login')">iniciar sesion</button></li>
+        <li><button onclick="borrarLocalStorage()">Borrar LocalStorage</button></li>
+      </ul>
+    </div>
+
+    <div id="formulario" class="formulario-oculto">
+      <p id="mensajeRegistroLogin"></p>
+      <input type="text" id="username" placeholder="Nombre de usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <p id="mensaje-registro"></p>
+      <p id="mensaje-login"></p>
+      <button onclick="registroSubmit()">Aceptar</button>
+    </div>
+
+
+    <nav class="header-lower">
+      <ul>
+        <li>peliculas</li>
+        <li>tv shows</li>
+        <li>anime</li>
+        <li>noticias</li>
+        <li>ayuda</li>
+      </ul>
+
+      <ul>
+        <li>barra de busqueda</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <ul>
+        <li>Filtrar por genero</li>
+        <li>Buscar por titulo</li>
+        <li>mostrar series y peliculas por año de lanzamiento</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer></footer>
+  <script src="./scripts/index.js" type="module"></script>
+  <script src="./scripts/registro.js"></script>
+</body>
+
+</html>

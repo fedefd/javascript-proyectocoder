@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  & .header-upper {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+
+    & ul {
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+
+      & li {
+        margin-left: 10px;
+        padding: 3px;
+
+        & button {
+          padding: .1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  & .header-lower {
+    display: flex;
+    background-color: aquamarine;
+    max-width: 100%;
+    justify-content: space-between;
+
+    & ul {
+      padding: 5px;
+      margin: 5px;
+      display: flex;
+
+      & li {
+        margin-left: 10px;
+      }
+    }
+  }
+}
