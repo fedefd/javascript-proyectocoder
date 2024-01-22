@@ -1,9 +1,17 @@
 $main-color-text: rgb(240, 237, 237);
+$main-bg-color: #2b3135;
+$dark-text: #2b3135;
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $main-bg-color;
+  color: $main-color-text;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -35,6 +43,10 @@ input:focus {
 .containerbox {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.dark-text {
+  color: $dark-text;
 }
 
 @mixin mq-md {

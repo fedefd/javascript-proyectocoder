@@ -9,30 +9,33 @@
 </head>
 
 <body>
+
   <div id="fondo-borroso" class="fondo-borroso" onclick="ocultarFormulario()"></div>
   <header>
-    <div class="header-upper">
-      <h1>MyShowList</h1>
+    <div class="headerbg">
+      <div class="header-upper containerbox">
+        <h1>MyShowList</h1>
 
-      <ul>
-        <li>idioma</li>
-        <li><button onclick="mostrarFormulario('signup')">registrarse</button></li>
-        <li><button onclick="mostrarFormulario('login')">iniciar sesion</button></li>
-        <li><button onclick="borrarLocalStorage()">Borrar LocalStorage</button></li>
-      </ul>
+        <ul>
+          <li>idioma</li>
+          <li><button onclick="mostrarFormulario('signup')">registrarse</button></li>
+          <li><button onclick="mostrarFormulario('login')">iniciar sesion</button></li>
+          <li><button onclick="borrarLocalStorage()">Borrar LocalStorage</button></li>
+        </ul>
+      </div>
+
+      <div id="formulario" class="formulario-oculto">
+        <p id="mensajeRegistroLogin" class="dark-text"></p>
+        <input type="text" id="username" placeholder="Nombre de usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <p id="mensaje-registro" class="dark-text"></p>
+        <p id="mensaje-login" class="dark-text"></p>
+        <button onclick="registroSubmit()">Aceptar</button>
+      </div>
     </div>
 
-    <div id="formulario" class="formulario-oculto">
-      <p id="mensajeRegistroLogin"></p>
-      <input type="text" id="username" placeholder="Nombre de usuario">
-      <input type="password" id="password" placeholder="Contraseña">
-      <p id="mensaje-registro"></p>
-      <p id="mensaje-login"></p>
-      <button onclick="registroSubmit()">Aceptar</button>
-    </div>
 
-
-    <nav class="header-lower">
+    <nav class="header-lower containerbox">
       <ul>
         <li>peliculas</li>
         <li>tv shows</li>
@@ -46,19 +49,44 @@
       </ul>
     </nav>
   </header>
+  <div class="containerbox">
+    <main>
+      <div id="main-container">
+        <div>
+          <label for="genre">Ingresa el género a filtrar:</label>
+          <select id="genre">
+            <option value="Drama">Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Fantasia">Fantasía</option>
+            <option value="Comedia">Comedia</option>
+            <option value="CienciaFiccion">Ciencia Ficción</option>
+          </select>
+          <button onclick="filtrarPorGenero()">Filtrar</button>
+        </div>
 
-  <main>
-    <div>
-      <ul>
-        <li>Filtrar por genero</li>
-        <li>Buscar por titulo</li>
-        <li>mostrar series y peliculas por año de lanzamiento</li>
-      </ul>
-    </div>
-  </main>
+        <div>
+          <label for="title">Ingresa el título de la película o serie:</label>
+          <input type="text" id="title">
+          <button onclick="buscarPorTitulo()">Buscar</button>
+        </div>
 
+        <div>
+          <button onclick="ordenarPorAño()">Mostrar series y películas por año de lanzamiento</button>
+        </div>
+
+        <div>
+          <button onclick="mostrarTodosLosTitulos()">Mostrar todos los títulos</button>
+        </div>
+      </div>
+      <div id="result-container"></div>
+    </main>
+  </div>
   <footer></footer>
-  <script src="./scripts/index.js" type="module"></script>
+
+
+  <script src="./scripts/catalogo.js" type="module"></script>
+  <script src="./scripts/index.js"></script>
   <script src="./scripts/registro.js"></script>
 </body>
 
