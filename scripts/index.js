@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const tituloButton = document.getElementById('tituloButton');
   const yearButton = document.getElementById('yearButton');
   const todosLosTitulosButton = document.getElementById('todosLosTitulosButton');
+  const ocultarFormularioDeRegistro = document.getElementById('fondo-borroso');
 
   signupButton.addEventListener('click', function () {
     mostrarFormulario('signup');
@@ -96,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
   yearButton.addEventListener('click', ordenarPorAño);
 
   todosLosTitulosButton.addEventListener('click', mostrarTodosLosTitulos);
+
+  ocultarFormularioDeRegistro.addEventListener('click', ocultarFormulario);
 });
 
 function filtrarPorGenero() {
@@ -105,8 +108,8 @@ function filtrarPorGenero() {
 }
 
 function buscarPorTitulo() {
-  const titulo = document.getElementById('title').value;
-  const resultado = catalogo.filter(pelis => pelis.titulo.toLowerCase() === titulo.toLowerCase());
+  const titulo = document.getElementById('title').value.toLowerCase();
+  const resultado = catalogo.filter(pelis => pelis.titulo.toLowerCase().includes(titulo));
   mostrarResultado(resultado);
 }
 
