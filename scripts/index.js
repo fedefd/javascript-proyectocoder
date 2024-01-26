@@ -67,6 +67,36 @@ let catalogo = [
   }
 ];
 
+document.addEventListener('DOMContentLoaded', function () {
+  const signupButton = document.getElementById('signupButton');
+  const loginButton = document.getElementById('loginButton');
+  const borrarLocalStorageButton = document.getElementById('borrarLocalStorageButton');
+  const submitButton = document.getElementById('submitButton');
+  const generoButton = document.getElementById('generoButton');
+  const tituloButton = document.getElementById('tituloButton');
+  const yearButton = document.getElementById('yearButton');
+  const todosLosTitulosButton = document.getElementById('todosLosTitulosButton');
+
+  signupButton.addEventListener('click', function () {
+    mostrarFormulario('signup');
+  });
+
+  loginButton.addEventListener('click', function () {
+    mostrarFormulario('login');
+  });
+
+  borrarLocalStorageButton.addEventListener('click', borrarLocalStorage);
+
+  submitButton.addEventListener('click', registroSubmit);
+
+  generoButton.addEventListener('click', filtrarPorGenero);
+
+  tituloButton.addEventListener('click', buscarPorTitulo);
+
+  yearButton.addEventListener('click', ordenarPorAño);
+
+  todosLosTitulosButton.addEventListener('click', mostrarTodosLosTitulos);
+});
 
 function filtrarPorGenero() {
   const genero = document.getElementById('genre').value;

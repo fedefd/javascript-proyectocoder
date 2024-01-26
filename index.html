@@ -18,9 +18,9 @@
 
         <ul>
           <li>idioma</li>
-          <li><button onclick="mostrarFormulario('signup')">registrarse</button></li>
-          <li><button onclick="mostrarFormulario('login')">iniciar sesion</button></li>
-          <li><button onclick="borrarLocalStorage()">Borrar LocalStorage</button></li>
+          <li><button id="signupButton">registrarse</button></li>
+          <li><button id="loginButton">iniciar sesion</button></li>
+          <li><button id="borrarLocalStorageButton">Borrar LocalStorage</button></li>
         </ul>
       </div>
 
@@ -30,7 +30,7 @@
         <input type="password" id="password" placeholder="Contraseña">
         <p id="mensaje-registro" class="dark-text"></p>
         <p id="mensaje-login" class="dark-text"></p>
-        <button onclick="registroSubmit()">Aceptar</button>
+        <button id="submitButton">Aceptar</button>
       </div>
     </div>
 
@@ -62,21 +62,21 @@
             <option value="Comedia">Comedia</option>
             <option value="CienciaFiccion">Ciencia Ficción</option>
           </select>
-          <button onclick="filtrarPorGenero()">Filtrar</button>
+          <button id="generoButton">Filtrar</button>
         </div>
 
         <div>
           <label for="title">Ingresa el título de la película o serie:</label>
           <input type="text" id="title">
-          <button onclick="buscarPorTitulo()">Buscar</button>
+          <button id="tituloButton">Buscar</button>
         </div>
 
         <div>
-          <button onclick="ordenarPorAño()">Mostrar series y películas por año de lanzamiento</button>
+          <button id="yearButton">Mostrar series y películas por año de lanzamiento</button>
         </div>
 
         <div>
-          <button onclick="mostrarTodosLosTitulos()">Mostrar todos los títulos</button>
+          <button id="todosLosTitulosButton">Mostrar todos los títulos</button>
         </div>
       </div>
       <div id="result-container"></div>
