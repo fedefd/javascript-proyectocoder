@@ -71,6 +71,7 @@ header .header-upper ul {
 }
 header .header-upper ul li {
   padding: 0px 4px;
+  text-indent: 5px;
 }
 header .header-upper ul li a {
   line-height: 1.5;
@@ -106,12 +107,38 @@ header .header-lower {
   justify-content: space-between;
 }
 header .header-lower ul {
-  padding: 5px;
-  margin: 5px;
   display: flex;
+  height: 34px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 header .header-lower ul li {
-  margin-left: 10px;
+  height: 100%;
+  display: flex;
+  margin: 0 3px 0 0;
+  padding: 0 5px 0 5px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-indent: 3px;
+}
+header .header-lower ul li:hover {
+  background: #333;
+  color: #fff;
+}
+header .header-lower ul li a {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+}
+header .header-lower .main-searchbar-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-indent: 5px;
 }
 
 .formulario-oculto {

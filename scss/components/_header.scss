@@ -21,6 +21,7 @@ header {
 
       & li {
         padding: 0px 4px;
+        text-indent: 5px;
 
         & a {
           line-height: 1.5;
@@ -55,13 +56,43 @@ header {
     justify-content: space-between;
 
     & ul {
-      padding: 5px;
-      margin: 5px;
       display: flex;
+      height: 34px;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
 
       & li {
-        margin-left: 10px;
+
+        height: 100%;
+        display: flex;
+        margin: 0 3px 0 0;
+        padding: 0 5px 0 5px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        text-indent: 3px;
+
+        &:hover {
+          background: #333;
+          color: #fff;
+        }
+
+        & a {
+          font-size: .9rem;
+          text-align: center;
+          font-weight: 700;
+          display: block;
+          cursor: pointer;
+        }
       }
+    }
+
+    & .main-searchbar-wrapper {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-indent: 5px;
     }
   }
 }

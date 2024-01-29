@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const yearButton = document.getElementById('yearButton');
   const todosLosTitulosButton = document.getElementById('todosLosTitulosButton');
   const ocultarFormularioDeRegistro = document.getElementById('fondo-borroso');
+  const headerLowerPeliculas = document.getElementById('header-lower-peliculas');
+  const headerLowerSeries = document.getElementById('header-lower-serie');
+  const headerLowerAnimes = document.getElementById('header-lower-anime');
+  const headerLowerKdramas = document.getElementById('header-lower-kdrama');
+
 
   signupButton.addEventListener('click', function () {
     mostrarFormulario('signup');
@@ -35,11 +40,30 @@ document.addEventListener('DOMContentLoaded', function () {
   todosLosTitulosButton.addEventListener('click', mostrarTodosLosTitulos);
 
   ocultarFormularioDeRegistro.addEventListener('click', ocultarFormulario);
+
+  headerLowerPeliculas.addEventListener('click', mostrarPeliculas)
+
+  headerLowerSeries.addEventListener('click', mostrarSeries)
+
+  headerLowerAnimes.addEventListener('click', mostrarAnimes)
+
+  headerLowerKdramas.addEventListener('click', mostrarKdramas)
 });
 
+function quitarTildes(cadena) {
+  const tildes = { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u' };
+  return cadena.replace(/[áéíóú]/g, letra => tildes[letra] || letra);
+}
+
+
 function filtrarPorGenero() {
-  const genero = document.getElementById('genre').value;
-  const resultado = catalogo.filter(pelis => pelis.genero.toLowerCase() === genero.toLowerCase());
+  const generosSeleccionados = document.getElementById('genre').value.split(',').map(genero => genero.trim().toLowerCase());
+
+  const resultado = catalogo.filter(pelis => {
+    const generoPelicula = quitarTildes(pelis.genero.trim().toLowerCase());
+    return generosSeleccionados.some(genero => generoPelicula.includes(genero));
+  });
+
   mostrarResultado(resultado);
 }
 
