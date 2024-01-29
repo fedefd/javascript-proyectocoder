@@ -14,21 +14,39 @@ header {
 
 
     & ul {
-      margin: 5px;
-      padding: 5px;
       display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
 
       & li {
-        margin-left: 10px;
-        padding: 3px;
+        padding: 0px 4px;
 
-        & button {
-          padding: .1rem;
+        & a {
+          line-height: 1.5;
           cursor: pointer;
+          padding: 4px 8px;
+          border-radius: .2rem;
         }
       }
     }
   }
+
+  #signupButton,
+  #loginButton,
+  #borrarLocalStorageButton {
+    @include border-hover;
+  }
+
+  #desconexionButton {
+    @include border-hover;
+
+    & span {
+      color: red;
+    }
+  }
+
+
 
   & .header-lower {
     display: flex;

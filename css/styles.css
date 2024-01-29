@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: tahoma, sans-serif;
   background-color: #2b3135;
   color: rgb(240, 237, 237);
   scroll-behavior: smooth;
@@ -63,17 +64,40 @@ header .header-upper {
   justify-content: space-between;
 }
 header .header-upper ul {
-  margin: 5px;
-  padding: 5px;
   display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 header .header-upper ul li {
-  margin-left: 10px;
-  padding: 3px;
+  padding: 0px 4px;
 }
-header .header-upper ul li button {
-  padding: 0.1rem;
+header .header-upper ul li a {
+  line-height: 1.5;
   cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 0.2rem;
+}
+header #signupButton,
+header #loginButton,
+header #borrarLocalStorageButton {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+header #signupButton:hover,
+header #loginButton:hover,
+header #borrarLocalStorageButton:hover {
+  border: 2px solid white;
+}
+header #desconexionButton {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+header #desconexionButton:hover {
+  border: 2px solid white;
+}
+header #desconexionButton span {
+  color: red;
 }
 header .header-lower {
   display: flex;

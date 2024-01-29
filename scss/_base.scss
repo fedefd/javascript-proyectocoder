@@ -1,6 +1,7 @@
 $main-color-text: rgb(240, 237, 237);
 $main-bg-color: #2b3135;
 $dark-text: #2b3135;
+$ff-tahoma: tahoma, sans-serif;
 
 * {
   padding: 0;
@@ -9,6 +10,7 @@ $dark-text: #2b3135;
 }
 
 body {
+  font-family: $ff-tahoma;
   background-color: $main-bg-color;
   color: $main-color-text;
   scroll-behavior: smooth;
@@ -64,5 +66,14 @@ input:focus {
   @media (min-width: 1200px) {
 
     @content;
+  }
+}
+
+@mixin border-hover {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 2px solid white;
   }
 }
