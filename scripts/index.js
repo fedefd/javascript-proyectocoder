@@ -3,6 +3,7 @@ import { catalogo } from "./catalogo.js";
 document.addEventListener('DOMContentLoaded', function () {
   const signupButton = document.getElementById('signupButton');
   const loginButton = document.getElementById('loginButton');
+  const desconexionButton = document.getElementById('desconexionButton');
   const borrarLocalStorageButton = document.getElementById('borrarLocalStorageButton');
   const submitButton = document.getElementById('submitButton');
   const generoButton = document.getElementById('generoButton');
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
   loginButton.addEventListener('click', function () {
     mostrarFormulario('login');
   });
+
+  desconexionButton.addEventListener('click', salirDeLaSesion);
 
   borrarLocalStorageButton.addEventListener('click', borrarLocalStorage);
 

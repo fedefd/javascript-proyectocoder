@@ -20,7 +20,8 @@
           <li>idioma</li>
           <li><button id="signupButton">registrarse</button></li>
           <li><button id="loginButton">iniciar sesion</button></li>
-          <li><button id="borrarLocalStorageButton">Borrar LocalStorage</button></li>
+          <li><button id="desconexionButton" class="displayNone">salir de la sesion</button></li>
+          <li><button id="borrarLocalStorageButton">borrar LocalStorage</button></li>
         </ul>
       </div>
 
@@ -44,9 +45,11 @@
         <li>ayuda</li>
       </ul>
 
-      <ul>
-        <li>barra de busqueda</li>
-      </ul>
+      <div class="main-searchbar-wrapper">
+        <label for="search"></label>
+        <input type="search" id="title" placeholder="buscá cualquier título" style="opacity: 0.7;">
+        <button id="tituloButton">Buscar</button>
+      </div>
     </nav>
   </header>
   <div class="containerbox">
@@ -63,12 +66,6 @@
             <option value="CienciaFiccion">Ciencia Ficción</option>
           </select>
           <button id="generoButton">Filtrar</button>
-        </div>
-
-        <div>
-          <label for="title">Ingresa el título de la película o serie:</label>
-          <input type="text" id="title">
-          <button id="tituloButton">Buscar</button>
         </div>
 
         <div>

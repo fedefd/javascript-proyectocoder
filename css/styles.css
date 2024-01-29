@@ -45,6 +45,10 @@ input:focus {
   color: #2b3135;
 }
 
+.displayNone {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;

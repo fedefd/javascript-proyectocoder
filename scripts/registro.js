@@ -1,3 +1,5 @@
+let loggedIn = false;
+
 function mostrarFormulario(tipo) {
   document.getElementById('formulario').style.display = 'block';
   document.getElementById('mensaje-registro').innerText = '';
@@ -11,6 +13,14 @@ function mostrarFormulario(tipo) {
   document.getElementById('mensajeRegistroLogin').innerHTML = registrando ? 'Registro' : 'Iniciar Sesión';
 }
 
+function ocultarFormulario() {
+  document.getElementById('fondo-borroso').style.display = 'none';
+  document.getElementById('formulario').style.display = 'none';
+  document.getElementById('mensaje-registro').innerText = '';
+  document.getElementById('mensaje-login').innerText = '';
+  document.getElementById('username').value = '';
+  document.getElementById('password').value = '';
+}
 
 function registroSubmit() {
   const username = document.getElementById('username').value;
@@ -52,25 +62,52 @@ function signUp(username, password) {
 function logIn(username, password) {
   const users = JSON.parse(localStorage.getItem('users')) || [];
   const user = users.find(user => user.username === username && user.password === password);
-
   limpiarMensajeLogin();
 
   if (user) {
+    localStorage.setItem('loggedIn', true);
+    localStorage.setItem('username', username);
     document.getElementById('mensaje-login').innerText = 'Inicio de sesión exitoso. ¡Bienvenido, ' + username + '!';
+    sesionIniciada();
   } else {
     document.getElementById('mensaje-login').innerText = 'Nombre de usuario o contraseña incorrectos. Intentalo de nuevo.';
   }
 }
 
-function ocultarFormulario() {
-  document.getElementById('fondo-borroso').style.display = 'none';
-  document.getElementById('formulario').style.display = 'none';
-  document.getElementById('mensaje-registro').innerText = '';
-  document.getElementById('mensaje-login').innerText = '';
-  document.getElementById('username').value = '';
-  document.getElementById('password').value = '';
+function sesionIniciada() {
+  const loggedIn = localStorage.getItem('loggedIn') === 'true';
+
+  if (loggedIn) {
+    const username = localStorage.getItem('username');
+    console.log('bienvenido ' + username);
+    actualizarInterfazSesionIniciada();
+  } else {
+    console.log('sesion no iniciada')
+  }
+}
+
+document.addEventListener('DOMContentLoaded', sesionIniciada); // para llamar a la funcion al cargar la pagina para comprobar la sesion
+
+function salirDeLaSesion() {
+  localStorage.removeItem('loggedIn')
+  limpiarMensajeLogin();
+  console.log('Logged Off')
+  actualizarInterfazSesionCerrada();
+}
+
+function actualizarInterfazSesionIniciada() {
+  signupButton.style.display = 'none';
+  loginButton.style.display = 'none';
+  desconexionButton.style.display = 'inline-block';
+}
+
+function actualizarInterfazSesionCerrada() {
+  desconexionButton.style.display = 'none';
+  signupButton.style.display = 'inline-block';
+  loginButton.style.display = 'inline-block';
 }
 
 function borrarLocalStorage() {
   localStorage.clear();
+  console.log('localstorage cleareado')
 }
