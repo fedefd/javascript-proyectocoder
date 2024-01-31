@@ -1,5 +1,10 @@
 let loggedIn = false;
 
+const users = [
+  { username: 'usuario', password: 'contraseña' },
+];
+localStorage.setItem('users', JSON.stringify(users));
+
 function mostrarFormulario(tipo) {
   document.getElementById('formulario').style.display = 'block';
   document.getElementById('mensaje-registro').innerText = '';
@@ -7,6 +12,7 @@ function mostrarFormulario(tipo) {
   document.getElementById('fondo-borroso').style.display = 'block';
 
   registrando = tipo === 'signup';
+  logeando = tipo === 'login';
   const passwordInput = document.getElementById('password');
   passwordInput.style.display = 'block';
   passwordInput.placeholder = registrando ? 'Contraseña' : 'Contraseña';
@@ -28,10 +34,14 @@ function registroSubmit() {
 
   if (registrando) {
     signUp(username, password);
-  } else {
+  } else if (logeando) {
     logIn(username, password);
   }
+  if (localStorage.getItem('loggedIn') === 'true') {
+    setTimeout(() => { ocultarFormulario(); }, 2000)  // 2 segundos para ocultar el formulario
+  }
 }
+
 
 function limpiarMensajeRegistro() {
   document.getElementById('mensaje-registro').innerText = '';
