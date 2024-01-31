@@ -7,14 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const borrarLocalStorageButton = document.getElementById('borrarLocalStorageButton');
   const submitButton = document.getElementById('submitButton');
   const generoButton = document.getElementById('generoButton');
-  const tituloButton = document.getElementById('tituloButton');
   const yearButton = document.getElementById('yearButton');
   const todosLosTitulosButton = document.getElementById('todosLosTitulosButton');
   const ocultarFormularioDeRegistro = document.getElementById('fondo-borroso');
-  const headerLowerPeliculas = document.getElementById('header-lower-peliculas');
-  const headerLowerSeries = document.getElementById('header-lower-serie');
-  const headerLowerAnimes = document.getElementById('header-lower-anime');
-  const headerLowerKdramas = document.getElementById('header-lower-kdrama');
+
 
 
   signupButton.addEventListener('click', function () {
@@ -33,21 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   generoButton.addEventListener('click', filtrarPorGenero);
 
-  tituloButton.addEventListener('click', buscarPorTitulo);
-
   yearButton.addEventListener('click', ordenarPorAño);
 
   todosLosTitulosButton.addEventListener('click', mostrarTodosLosTitulos);
 
   ocultarFormularioDeRegistro.addEventListener('click', ocultarFormulario);
-
-  headerLowerPeliculas.addEventListener('click', mostrarPeliculas)
-
-  headerLowerSeries.addEventListener('click', mostrarSeries)
-
-  headerLowerAnimes.addEventListener('click', mostrarAnimes)
-
-  headerLowerKdramas.addEventListener('click', mostrarKdramas)
 });
 
 function quitarTildes(cadena) {
@@ -67,11 +53,6 @@ function filtrarPorGenero() {
   mostrarResultado(resultado);
 }
 
-function buscarPorTitulo() {
-  const titulo = document.getElementById('title').value.toLowerCase();
-  const resultado = catalogo.filter(pelis => pelis.titulo.toLowerCase().includes(titulo));
-  mostrarResultado(resultado);
-}
 
 function ordenarPorAño() {
   const resultado = catalogo.sort((a, b) => a.año - b.año);
@@ -83,7 +64,7 @@ function mostrarTodosLosTitulos() {
   mostrarResultado(resultado);
 }
 
-function mostrarResultado(resultado) {
+export function mostrarResultado(resultado) {
   const resultContainer = document.getElementById('result-container');
   resultContainer.innerHTML = '';
 

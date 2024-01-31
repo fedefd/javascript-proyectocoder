@@ -27,7 +27,7 @@
 
       <div id="formulario" class="formulario-oculto">
         <p id="mensajeRegistroLogin" class="dark-text"></p>
-        <input type="text" id="username" placeholder="Nombre de usuario">
+        <input type="text" id="username" placeholder="Nombre de usuario" autocomplete="additional-name">
         <input type="password" id="password" placeholder="Contraseña">
         <p id="mensaje-registro" class="dark-text"></p>
         <p id="mensaje-login" class="dark-text"></p>
@@ -38,16 +38,16 @@
 
     <nav class="header-lower containerbox">
       <ul>
-        <li><a id="header-lower-peliculas">peliculas</a></li>
-        <li><a id="header-lower-serie">tv shows</a></li>
-        <li><a id="header-lower-anime">anime</a></li>
-        <li><a id="header-lower-kdrama">kdramas</a></li>
-        <li><a>noticias</a></li>
-        <li><a>ayuda</a></li>
+        <li><a id="header-lower-peliculas">Peliculas</a></li>
+        <li><a id="header-lower-serie">TV Shows</a></li>
+        <li><a id="header-lower-anime">Anime</a></li>
+        <li><a id="header-lower-kdrama">Kdramas</a></li>
+        <li><a>Noticias</a></li>
+        <li><a>Ayuda</a></li>
       </ul>
 
       <div class="main-searchbar-wrapper">
-        <label for="search"></label>
+        <label for="title"></label>
         <input type="search" id="title" placeholder="buscá cualquier título" style="opacity: 0.7;">
         <button id="tituloButton">Buscar</button>
       </div>
@@ -55,6 +55,7 @@
   </header>
   <div class="containerbox">
     <main>
+      <div id="result-container"></div>
       <div id="main-container">
         <div>
           <label for="genre">Ingresa el género a filtrar:</label>
@@ -78,7 +79,6 @@
           <button id="todosLosTitulosButton">Mostrar todos los títulos</button>
         </div>
       </div>
-      <div id="result-container"></div>
     </main>
   </div>
   <footer></footer>
@@ -86,7 +86,7 @@
 
   <script src="./scripts/catalogo.js" type="module"></script>
   <script src="./scripts/index.js" type="module"></script>
-  <script src="./scripts/header-lower.js"></script>
+  <script src="./scripts/header-lower.js" type="module"></script>
   <script src="./scripts/registro.js"></script>
 </body>
 
