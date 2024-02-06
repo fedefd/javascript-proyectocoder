@@ -151,7 +151,7 @@ header .header-lower .main-searchbar-wrapper {
 }
 
 #tituloButton {
-  padding: 10px 20px;
+  padding: 7px 20px;
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: rgba(84, 97, 211, 0.822);
@@ -161,6 +161,11 @@ header .header-lower .main-searchbar-wrapper {
 #tituloButton:hover {
   transition: 0.5s;
   background-color: rgba(57, 73, 143, 0.801);
+}
+
+.header-lower-active {
+  background: #333;
+  color: #fff;
 }
 
 .formulario-oculto {

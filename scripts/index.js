@@ -13,11 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const ocultarCatalogo = document.getElementById('ocultar-resultados');
   const selectGenero = document.getElementById('genre');
   const buscarTitulo = document.getElementById('title');
+  const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
+  const elementosAHeaderLower = document.querySelectorAll('.header-lower ul li a');
+
+
+  function handleClick(event) {
+    elementosLiHeaderLower.forEach(li => {
+      li.classList.remove('header-lower-active');
+    });
+    event.currentTarget.parentNode.classList.add('header-lower-active');
+  }
+  elementosAHeaderLower.forEach(a => {
+    a.addEventListener('click', handleClick);
+  });
+
 
   buscarTitulo.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       event.preventDefault();
-      tituloButton.click();  // para pulsar enter en el buscador por titulo
+      tituloButton.click();
     }
   })
 
@@ -34,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
   selectGenero.addEventListener('focus', function () {
     selectGenero.classList.add('select-active');
   });
+
+
 
 
   signupButton.addEventListener('click', function () {
@@ -66,6 +82,7 @@ function quitarTildes(cadena) {
 
 
 function filtrarPorGenero() {
+  const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
   const generosSeleccionados = document.getElementById('genre').value.split(',').map(genero => genero.trim().toLowerCase());
 
   const resultado = catalogo.filter(pelis => {
@@ -74,6 +91,9 @@ function filtrarPorGenero() {
   });
 
   mostrarResultado(resultado);
+  elementosLiHeaderLower.forEach(li => {
+    li.classList.remove('header-lower-active');
+  });
 }
 
 
@@ -117,6 +137,7 @@ function ocultarResultados() {
 }
 
 function mostrarResultadoConAño(resultado) {
+  const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
   const resultContainer = document.getElementById('result-container');
   resultContainer.innerHTML = '';
 
@@ -150,6 +171,9 @@ function mostrarResultadoConAño(resultado) {
     });
   }
   setTimeout(ajustarTamañoLetra, 0);
+  elementosLiHeaderLower.forEach(li => {
+    li.classList.remove('header-lower-active');
+  });
 }
 
 function ajustarTamañoLetra() {

@@ -77,7 +77,14 @@ function mostrarKdramas() {
 
 
 function buscarPorTituloSearchBar() {
+  const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
   const titulo = document.getElementById('title').value.toLowerCase();
   const resultado = catalogo.filter(pelis => pelis.titulo.toLowerCase().includes(titulo));
+
   mostrarResultado(resultado);
+  document.getElementById('title').value = '';
+
+  elementosLiHeaderLower.forEach(li => {
+    li.classList.remove('header-lower-active');
+  });
 }
