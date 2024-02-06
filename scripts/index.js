@@ -133,7 +133,12 @@ export function mostrarResultado(resultado) {
 
 function ocultarResultados() {
   const resultContainer = document.getElementById('result-container');
+  const resultAutoComplete = document.getElementById('autocomplete-results');
+  const resultSearch = document.getElementById('searchResults');
   resultContainer.innerHTML = '';
+  resultAutoComplete.innerHTML = '';
+  resultSearch.innerHTML = '';
+  document.getElementById('searchResults').classList.remove('search-results-active');
 }
 
 function mostrarResultadoConAño(resultado) {

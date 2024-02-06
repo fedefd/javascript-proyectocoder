@@ -221,6 +221,55 @@ header .header-lower .main-searchbar-wrapper {
   object-fit: cover;
 }
 
+.api-tmdb {
+  width: 100%;
+  display: inline-block;
+  margin-top: 2rem;
+}
+.api-tmdb img {
+  width: 139px;
+  height: 200px;
+  object-fit: fill;
+}
+.api-tmdb img:hover {
+  box-shadow: 0 4px 6px 0 rgba(255, 255, 255, 0.2), 0 5px 17px 0 rgba(255, 255, 255, 0.19);
+}
+.api-tmdb ul {
+  list-style-type: none;
+  padding: 0;
+}
+.api-tmdb li {
+  display: inline-block;
+  margin-right: 0.6rem;
+  padding: 0.5rem;
+  width: 139px;
+  cursor: pointer;
+}
+.api-tmdb li span {
+  display: flex;
+  overflow: hidden;
+}
+
+#search-input {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(57, 73, 143, 0.801);
+  border: none;
+  color: rgb(240, 237, 237);
+  padding: 1rem;
+  border-radius: 10px;
+}
+#search-input::placeholder {
+  color: rgb(240, 237, 237);
+  text-align: center;
+}
+
+.search-results-active {
+  border: 1px solid white;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
 #main-container {
   display: flex;
   margin-top: 0.5rem;
