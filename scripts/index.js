@@ -60,7 +60,10 @@ function ordenarPorAño() {
 }
 
 function mostrarTodosLosTitulos() {
-  const resultado = catalogo.map(item => (item.titulo ? { titulo: item.titulo } : { titulo: "Título no disponible" }));
+  const resultado = catalogo.map(item => ({
+    titulo: item.titulo ? item.titulo : "Título no disponible",
+    imagen: item.imagen ? item.imagen : "Imagen no disponible"
+  }));
   mostrarResultado(resultado);
 }
 
@@ -72,9 +75,21 @@ export function mostrarResultado(resultado) {
     resultContainer.innerText = "No se encontraron resultados.";
   } else {
     resultado.forEach(pelicula => {
+      const div = document.createElement('div');
+
+
+      const imagen = document.createElement('img');
+      imagen.src = pelicula.imagen;
+      imagen.alt = pelicula.titulo;
+
+
       const p = document.createElement('p');
-      p.textContent = `${pelicula.titulo} `;
-      resultContainer.appendChild(p);
+      p.textContent = pelicula.titulo;
+
+
+      div.appendChild(p);
+      div.appendChild(imagen);
+      resultContainer.appendChild(div);
     });
   }
 }
@@ -87,9 +102,22 @@ function mostrarResultadoConAño(resultado) {
     resultContainer.innerText = "No se encontraron resultados.";
   } else {
     resultado.forEach(pelicula => {
+
+      const div = document.createElement('div');
+
+
+      const imagen = document.createElement('img');
+      imagen.src = pelicula.imagen;
+      imagen.alt = pelicula.titulo;
+
+
       const p = document.createElement('p');
-      p.textContent = `Título: ${pelicula.titulo} (${pelicula.año})`;
-      resultContainer.appendChild(p);
+      p.textContent = `${pelicula.titulo} (${pelicula.año})`;
+
+
+      div.appendChild(p);
+      div.appendChild(imagen);
+      resultContainer.appendChild(div);
     });
   }
 }
