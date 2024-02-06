@@ -5,7 +5,7 @@ export let catalogo = [
     año: 1972,
     genero: "Drama",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/el_padrino.jpg"
+    imagen: "img/catalogoPeliculas/el_padrino.jpg"
   },
   {
     titulo: "Matrix",
@@ -13,7 +13,7 @@ export let catalogo = [
     año: 1999,
     genero: "Ciencia ficción",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/matrix.png"
+    imagen: "img/catalogoPeliculas/matrix.png"
   },
   {
     titulo: "Titanic",
@@ -21,7 +21,7 @@ export let catalogo = [
     año: 1997,
     genero: "Romance",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/titanic.jpg"
+    imagen: "img/catalogoPeliculas/titanic.jpg"
   },
   {
     titulo: "The Office",
@@ -29,7 +29,7 @@ export let catalogo = [
     año: 2005,
     genero: "Comedia",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_office.png"
+    imagen: "img/catalogoTVShows/the_office.png"
   },
   {
     titulo: "Parks and Recreation",
@@ -37,7 +37,7 @@ export let catalogo = [
     año: 2009,
     genero: "Comedia",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/parks_and_rec.jpg"
+    imagen: "img/catalogoTVShows/parks_and_rec.jpg"
   },
   {
     titulo: "Breaking Bad",
@@ -45,7 +45,7 @@ export let catalogo = [
     año: 2008,
     genero: "Drama",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/breaking_bad.png"
+    imagen: "img/catalogoTVShows/breaking_bad.png"
   },
   {
     titulo: "Game of Thrones",
@@ -53,7 +53,7 @@ export let catalogo = [
     año: 2011,
     genero: "Fantasía",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/game_of_thrones.jpg"
+    imagen: "img/catalogoTVShows/game_of_thrones.jpg"
   },
   {
     titulo: "The Witcher",
@@ -61,7 +61,7 @@ export let catalogo = [
     año: 2019,
     genero: "Fantasía",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_witcher.png"
+    imagen: "img/catalogoTVShows/the_witcher.png"
   },
   {
     titulo: "Pokemon",
@@ -69,7 +69,7 @@ export let catalogo = [
     año: 1997,
     genero: "Aventura",
     tipo: 'Anime',
-    imagen: "../img/catalogoAnime/pokemon.jpg"
+    imagen: "img/catalogoAnime/pokemon.jpg"
   },
   {
     titulo: "Doona",
@@ -77,7 +77,7 @@ export let catalogo = [
     año: 2023,
     genero: "Romance",
     tipo: 'Serie, Kdrama',
-    imagen: "../img/catalogoKdrama/doona.png"
+    imagen: "img/catalogoKdrama/doona.png"
   },
   {
     titulo: "Peaky Blinders",
@@ -85,7 +85,7 @@ export let catalogo = [
     año: 2013,
     genero: "Drama",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/peaky_blinders.jpg"
+    imagen: "img/catalogoTVShows/peaky_blinders.jpg"
   },
   {
     titulo: "Inception",
@@ -93,7 +93,7 @@ export let catalogo = [
     año: 2010,
     genero: "Ciencia ficción, Acción",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/inception.jpg"
+    imagen: "img/catalogoPeliculas/inception.jpg"
   },
   {
     titulo: "The Shawshank Redemption",
@@ -101,56 +101,56 @@ export let catalogo = [
     año: 1994,
     genero: "Drama",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_shawshank_redemption.jpg"
+    imagen: "img/catalogoPeliculas/the_shawshank_redemption.jpg"
   }, {
     titulo: "The Dark Knight",
     creador: "Christopher Nolan",
     año: 2008,
     genero: "Acción, Crimen",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_dark_knight.png"
+    imagen: "img/catalogoPeliculas/the_dark_knight.png"
   }, {
     titulo: "Stranger Things",
     creador: "The Duffer Brothers",
     año: 2016,
     genero: "Ciencia ficción, Terror, Drama",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/stranger_things.png"
+    imagen: "img/catalogoTVShows/stranger_things.png"
   }, {
     titulo: "Friends",
     creador: "David Crane, Marta Kauffman",
     año: 1994,
     genero: "Comedia, Romance",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/friends.jpg"
+    imagen: "img/catalogoTVShows/friends.jpg"
   }, {
     titulo: "Death Note",
     creador: "Tsugumi Ohba",
     año: 2006,
     genero: "Misterio, Psicológico, Sobrenatural",
     tipo: 'Anime',
-    imagen: "../img/catalogoAnime/death_note.jpg"
+    imagen: "img/catalogoAnime/death_note.jpg"
   }, {
     titulo: "Crash Landing on You",
     creador: "Park Ji-eun",
     año: 2019,
     genero: "Comedia romántica, Drama",
     tipo: 'Serie, Kdrama',
-    imagen: "../img/catalogoKdrama/crash_landing_on_you.jpg"
+    imagen: "img/catalogoKdrama/crash_landing_on_you.jpg"
   }, {
     titulo: "Itaewon Class",
     creador: "Jo Gwang-jin",
     año: 2020,
     genero: "Drama, Acción",
     tipo: 'Serie, Kdrama',
-    imagen: "../img/catalogoKdrama/itaewon_class.png"
+    imagen: "img/catalogoKdrama/itaewon_class.png"
   }, {
     titulo: "La La Land",
     creador: "Damien Chazelle",
     año: 2016,
     genero: "Musical, Drama",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/la_la_land.png"
+    imagen: "img/catalogoPeliculas/la_la_land.png"
   },
   {
     titulo: "The Mandalorian",
@@ -158,7 +158,7 @@ export let catalogo = [
     año: 2019,
     genero: "Ciencia ficción, Acción",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_mandalorian.jpg"
+    imagen: "img/catalogoTVShows/the_mandalorian.jpg"
   },
   {
     titulo: "One Punch Man",
@@ -166,7 +166,7 @@ export let catalogo = [
     año: 2015,
     genero: "Acción, Comedia, Superhéroes",
     tipo: 'Anime',
-    imagen: "../img/catalogoAnime/one_punch_man.jpg"
+    imagen: "img/catalogoAnime/one_punch_man.jpg"
   },
   {
     titulo: "My ID is Gangnam Beauty",
@@ -174,7 +174,7 @@ export let catalogo = [
     año: 2018,
     genero: "Romance, Drama",
     tipo: 'Kdrama',
-    imagen: "../img/catalogoKdrama/my_id_is_gangnam_beauty.jpg"
+    imagen: "img/catalogoKdrama/my_id_is_gangnam_beauty.jpg"
   },
   {
     titulo: "Black Mirror",
@@ -182,7 +182,7 @@ export let catalogo = [
     año: 2011,
     genero: "Ciencia ficción, Drama, Thriller",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/black_mirror.png"
+    imagen: "img/catalogoTVShows/black_mirror.png"
   },
   {
     titulo: "Spirited Away",
@@ -190,7 +190,7 @@ export let catalogo = [
     año: 2001,
     genero: "Animación, Aventura, Familia",
     tipo: 'Anime, Pelicula',
-    imagen: "../img/catalogoAnime/spirited_away.png"
+    imagen: "img/catalogoAnime/spirited_away.png"
   },
   {
     titulo: "The Crown",
@@ -198,7 +198,7 @@ export let catalogo = [
     año: 2016,
     genero: "Biografía, Drama, Historia",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_crown.jpg"
+    imagen: "img/catalogoTVShows/the_crown.jpg"
   },
   {
     titulo: "My Neighbor Totoro",
@@ -206,7 +206,7 @@ export let catalogo = [
     año: 1988,
     genero: "Animación, Aventura, Familia",
     tipo: 'Anime, Pelicula',
-    imagen: "../img/catalogoAnime/my_neighbour_totoro.jpg"
+    imagen: "img/catalogoAnime/my_neighbour_totoro.jpg"
   },
   {
     titulo: "Forrest Gump",
@@ -214,7 +214,7 @@ export let catalogo = [
     año: 1994,
     genero: "Drama, Romance",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/forrest_gump.jpg"
+    imagen: "img/catalogoPeliculas/forrest_gump.jpg"
   },
   {
     titulo: "La Casa de Papel",
@@ -222,7 +222,7 @@ export let catalogo = [
     año: 2017,
     genero: "Acción, Crimen, Misterio",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/la_casa_de_papel.png"
+    imagen: "img/catalogoTVShows/la_casa_de_papel.png"
   },
   {
     titulo: "Your Lie in April",
@@ -230,7 +230,7 @@ export let catalogo = [
     año: 2014,
     genero: "Anime, Drama, Música",
     tipo: 'Anime',
-    imagen: "../img/catalogoAnime/your_lie_in_april.png"
+    imagen: "img/catalogoAnime/your_lie_in_april.png"
   },
   {
     titulo: "The Dark Knight Rises",
@@ -238,21 +238,21 @@ export let catalogo = [
     año: 2012,
     genero: "Acción, Aventura",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_dark_knight_rises.jpg"
+    imagen: "img/catalogoPeliculas/the_dark_knight_rises.jpg"
   }, {
     titulo: "Ghost in the Shell",
     creador: "Masamune Shirow",
     año: 1995,
     genero: "Acción, Ciencia ficción",
     tipo: 'Anime, Pelicula',
-    imagen: "../img/catalogoAnime/ghost_in_the_shell.png"
+    imagen: "img/catalogoAnime/ghost_in_the_shell.png"
   }, {
     titulo: "El Padrino Parte II",
     creador: "Francis Ford Coppola",
     año: 1974,
     genero: "Drama",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/el_padrino_parte_ii.jpg"
+    imagen: "img/catalogoPeliculas/el_padrino_parte_ii.jpg"
   },
   {
     titulo: "The Matrix Reloaded",
@@ -260,7 +260,7 @@ export let catalogo = [
     año: 2003,
     genero: "Ciencia ficción",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_matrix_reloaded.png"
+    imagen: "img/catalogoPeliculas/the_matrix_reloaded.png"
   },
   {
     titulo: "Bastardos Sin Gloria",
@@ -268,7 +268,7 @@ export let catalogo = [
     año: 2009,
     genero: "Drama, Bélico",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/bastardos_sin_gloria.jpg"
+    imagen: "img/catalogoPeliculas/bastardos_sin_gloria.jpg"
   },
   {
     titulo: "Los Simpsons",
@@ -276,7 +276,7 @@ export let catalogo = [
     año: 1989,
     genero: "Animación, Comedia",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/los_simpsons.png"
+    imagen: "img/catalogoTVShows/los_simpsons.png"
   },
   {
     titulo: "Sherlock",
@@ -284,7 +284,7 @@ export let catalogo = [
     año: 2010,
     genero: "Crimen, Drama, Misterio",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/sherlock.jpg"
+    imagen: "img/catalogoTVShows/sherlock.jpg"
   },
   {
     titulo: "Avatar: The Last Airbender",
@@ -292,7 +292,7 @@ export let catalogo = [
     año: 2005,
     genero: "Animación, Acción, Aventura",
     tipo: 'Serie, Anime',
-    imagen: "../img/catalogoAnime/avatar_the_last_airbender.jpg"
+    imagen: "img/catalogoAnime/avatar_the_last_airbender.jpg"
   },
   {
     titulo: "Soul",
@@ -300,7 +300,7 @@ export let catalogo = [
     año: 2020,
     genero: "Animación, Aventura, Comedia",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/soul.jpg"
+    imagen: "img/catalogoPeliculas/soul.jpg"
   },
   {
     titulo: "The Grand Budapest Hotel",
@@ -308,7 +308,7 @@ export let catalogo = [
     año: 2014,
     genero: "Comedia, Drama",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_grand_budapest_hotel.jpg"
+    imagen: "img/catalogoPeliculas/the_grand_budapest_hotel.jpg"
   },
   {
     titulo: "The Umbrella Academy",
@@ -316,7 +316,7 @@ export let catalogo = [
     año: 2019,
     genero: "Acción, Aventura, Comedia",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_umbrella_academy.png"
+    imagen: "img/catalogoTVShows/the_umbrella_academy.png"
   },
   {
     titulo: "Demon Slayer: Kimetsu no Yaiba",
@@ -324,7 +324,7 @@ export let catalogo = [
     año: 2019,
     genero: "Anime, Acción, Fantasía",
     tipo: 'Anime',
-    imagen: "../img/catalogoAnime/demon_slayer_kimetsu_no_yaiba.jpg"
+    imagen: "img/catalogoAnime/demon_slayer_kimetsu_no_yaiba.jpg"
   },
   {
     titulo: "The Silence of the Lambs",
@@ -332,7 +332,7 @@ export let catalogo = [
     año: 1991,
     genero: "Crimen, Drama, Suspenso",
     tipo: 'Pelicula',
-    imagen: "../img/catalogoPeliculas/the_silence_of_the_lambs.png"
+    imagen: "img/catalogoPeliculas/the_silence_of_the_lambs.png"
   },
   {
     titulo: "The Expanse",
@@ -340,7 +340,7 @@ export let catalogo = [
     año: 2015,
     genero: "Drama, Misterio, Ciencia ficción",
     tipo: 'Serie',
-    imagen: "../img/catalogoTVShows/the_expanse.jpg"
+    imagen: "img/catalogoTVShows/the_expanse.jpg"
   }
 
 ];
