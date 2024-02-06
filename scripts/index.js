@@ -7,10 +7,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const borrarLocalStorageButton = document.getElementById('borrarLocalStorageButton');
   const submitButton = document.getElementById('submitButton');
   const generoButton = document.getElementById('generoButton');
+  const tituloButton = document.getElementById('tituloButton');
   const yearButton = document.getElementById('yearButton');
   const ocultarFormularioDeRegistro = document.getElementById('fondo-borroso');
   const ocultarCatalogo = document.getElementById('ocultar-resultados');
   const selectGenero = document.getElementById('genre');
+  const buscarTitulo = document.getElementById('title');
+
+  buscarTitulo.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      tituloButton.click();  // para pulsar enter en el buscador por titulo
+    }
+  })
 
   selectGenero.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {

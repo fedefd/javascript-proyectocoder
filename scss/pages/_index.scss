@@ -19,7 +19,7 @@
     border-radius: 5px;
     border: 1px solid transparent;
     font-size: 1.1rem;
-    width: 200px;
+    max-width: 200px;
     outline: none;
     background-color: rgba(84, 97, 211, 0.822);
     color: $main-color-text;
@@ -48,4 +48,11 @@
 
 .select-active {
   border: 1px solid orange !important;
+}
+
+.divYearButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .2rem;
 }

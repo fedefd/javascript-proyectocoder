@@ -146,6 +146,23 @@ header .header-lower .main-searchbar-wrapper {
   text-indent: 5px;
 }
 
+#title {
+  opacity: 0.7;
+}
+
+#tituloButton {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(84, 97, 211, 0.822);
+  color: rgb(240, 237, 237);
+  cursor: pointer;
+}
+#tituloButton:hover {
+  transition: 0.5s;
+  background-color: rgba(57, 73, 143, 0.801);
+}
+
 .formulario-oculto {
   display: none;
   position: fixed;
@@ -218,7 +235,7 @@ header .header-lower .main-searchbar-wrapper {
   border-radius: 5px;
   border: 1px solid transparent;
   font-size: 1.1rem;
-  width: 200px;
+  max-width: 200px;
   outline: none;
   background-color: rgba(84, 97, 211, 0.822);
   color: rgb(240, 237, 237);
@@ -243,6 +260,13 @@ header .header-lower .main-searchbar-wrapper {
 
 .select-active {
   border: 1px solid orange !important;
+}
+
+.divYearButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
