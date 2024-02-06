@@ -349,5 +349,7 @@ export let catalogo = [
   titulo: "",
   creador: "",
   año: ,
-  genero: ""
+  genero: "",
+  tipo: '',
+  imagen: ""
 } dejo esto aca para que se haga mas facil poder seguir agregando*/

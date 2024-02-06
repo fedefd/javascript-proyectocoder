@@ -1,0 +1,23 @@
+.catalogo-item {
+  display: inline-block;
+  margin: 1rem auto 0 .9rem;
+  color: $main-color-text;
+  font-weight: 700;
+  max-width: 200px;
+  max-height: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: $cards-boxshadow;
+  // white-space: nowrap;
+
+  & p {
+    width: 100%;
+    font-size: 100%;
+  }
+
+  & img {
+    object-fit: cover;
+  }
+}

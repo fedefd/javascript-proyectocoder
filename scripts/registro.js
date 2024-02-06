@@ -1,9 +1,11 @@
 let loggedIn = false;
 
-const users = [
-  { username: 'usuario', password: 'contraseña' },
-];
-localStorage.setItem('users', JSON.stringify(users));
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
+if (users.length === 0) {
+  users.push({ username: 'usuario', password: 'contraseña' });
+  localStorage.setItem('users', JSON.stringify(users));
+}
 
 function mostrarFormulario(tipo) {
   document.getElementById('formulario').style.display = 'block';
@@ -83,6 +85,23 @@ function logIn(username, password) {
     document.getElementById('mensaje-login').innerText = 'Nombre de usuario o contraseña incorrectos. Intentalo de nuevo.';
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
+
+  usernameInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      registroSubmit();
+    }// para pulsar enter en el registro o login 
+  });
+
+  passwordInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      registroSubmit();
+    }
+  });
+});
 
 function sesionIniciada() {
   const loggedIn = localStorage.getItem('loggedIn') === 'true';

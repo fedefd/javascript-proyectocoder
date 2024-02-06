@@ -2,6 +2,7 @@ $main-color-text: rgb(240, 237, 237);
 $main-bg-color: #2b3135;
 $dark-text: #2b3135;
 $ff-tahoma: tahoma, sans-serif;
+$cards-boxshadow: 0 4px 6px 0 rgba(255, 255, 255, 0.2), 0 5px 17px 0 rgba(255, 255, 255, 0.19);
 
 * {
   padding: 0;
@@ -53,6 +54,11 @@ input:focus {
 
 .displayNone {
   display: none;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
 }
 
 @mixin mq-md {
