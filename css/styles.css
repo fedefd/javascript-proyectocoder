@@ -268,6 +268,15 @@ header .header-lower .main-searchbar-wrapper {
   border: 1px solid white;
   padding: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.movie-details {
+  display: flex;
+}
+.movie-details img {
+  min-width: 33%;
+  min-height: 500px;
 }
 
 #main-container {

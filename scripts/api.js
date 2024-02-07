@@ -56,19 +56,27 @@ function displayResults(results) {
 }
 
 function showMovieDetails(movieId) {
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=es-ES`;
   axios.get(url)
     .then(response => {
       const movie = response.data;
       const detailsContainer = document.createElement('div');
       detailsContainer.classList.add('movie-details');
       detailsContainer.innerHTML = `
-        <h2>${movie.title}</h2>
         <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title} Poster">
-        <p>${movie.overview}</p>
-        <p>Fecha de lanzamiento: ${movie.release_date}</p>
-        <p>Géneros: ${movie.genres.map(genre => genre.name).join(', ')}</p>
-      `;
+        <div>
+        <p><strong>Resumen:</strong> ${movie.overview}</p>
+        <p><strong>Fecha de lanzamiento:</strong> ${movie.release_date}</p>
+        <p><strong>Géneros:</strong> ${movie.genres.map(genre => genre.name).join(', ')}</p>
+        <p><strong>Calificación:</strong> ${Math.round(movie.vote_average)}/10</p>
+        <p><strong>Número de votos:</strong> ${movie.vote_count}</p>
+        <p><strong>Duración:</strong> ${movie.runtime} minutos</p>
+        <p><strong>Países de producción:</strong> ${movie.production_countries.map(country => country.name).join(', ')}</p>
+        <p><strong>Compañías de producción:</strong> ${movie.production_companies.map(company => company.name).join(', ')}</p>
+        ${movie.homepage ? `<p><strong>Enlace a la página oficial:</strong> <a href="${movie.homepage}" target="_blank">${movie.title} - Página oficial</a></p>` : ''}
+        ${movie.streaming_sites && movie.streaming_sites.length > 0 ? `<p><strong>Enlaces de streaming:</strong> ${getStreamingLinks(movie)}</p>` : ''}
+        </div>
+        `;
       clearResults();
       document.getElementById('searchResults').appendChild(detailsContainer);
     })
@@ -78,6 +86,16 @@ function showMovieDetails(movieId) {
     });
 
   document.getElementById('search-input').value = '';
+}
+
+function getStreamingLinks(movie) {
+  let streamingLinks = '';
+  if (movie.streaming_sites && movie.streaming_sites.length > 0) {
+    streamingLinks = movie.streaming_sites.map(site => `<a href="${site.url}" target="_blank">${site.name}</a>`).join(', ');
+  } else {
+    streamingLinks = 'No disponible';
+  }
+  return streamingLinks;
 }
 
 

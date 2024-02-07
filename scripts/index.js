@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   buscarTitulo.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       event.preventDefault();
-      tituloButton.click();
+      tituloButton.click(); // para pulsar enter en la search bar del lower header
     }
   })
 
