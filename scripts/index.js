@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const buscarTitulo = document.getElementById('title');
   const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
   const elementosAHeaderLower = document.querySelectorAll('.header-lower ul li a');
-
+  const liocultarTitulos = document.getElementById('liOcultarTitulos');
 
   function handleClick(event) {
     elementosLiHeaderLower.forEach(li => {
@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
     selectGenero.classList.add('select-active');
   });
 
+  document.addEventListener('click', function (event) {
+    const liocultarTitulos = document.getElementById('liOcultarTitulos');
+    const targetElement = event.target;
+    if (targetElement !== liocultarTitulos && !liocultarTitulos.contains(targetElement)) {
+      liocultarTitulos.classList.remove('header-lower-active');
+    }
+  });
 
 
 

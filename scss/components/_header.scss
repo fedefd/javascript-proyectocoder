@@ -35,6 +35,7 @@ header {
 
   #signupButton,
   #loginButton,
+  #languageButton,
   #borrarLocalStorageButton {
     @include border-hover;
   }

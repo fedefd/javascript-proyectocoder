@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -17,40 +17,47 @@
         <h1>MyShowList</h1>
 
         <ul>
-          <li><a>idioma</a></li>
-          <li><a id="signupButton">registrarse</a></li>
-          <li><a id="loginButton"> iniciar sesion</a></li>
-          <li><a id="desconexionButton" class="displayNone"><span>x </span>salir de la sesion</a></li>
-          <li><a id="borrarLocalStorageButton">borrar LocalStorage</a></li>
+          <li><a id="languageButton" data-es="Idioma" data-en="Language">Idioma</a></li>
+          <li><a id="signupButton" data-es="Registrarse" data-en="Sign Up">Registrarse</a></li>
+          <li><a id="loginButton" data-es="Iniciar Sesion" data-en="Sign In"> Iniciar sesion</a></li>
+          <li><a id="desconexionButton" class="displayNone" data-es="Salir de la sesion"
+              data-en="Log off"><span>x</span> Salir de la sesion</a>
+          </li>
+          <li><a id="borrarLocalStorageButton" data-es="Borrar localStorage" data-en="Delete localStorage">borrar
+              LocalStorage</a></li>
         </ul>
       </div>
 
       <div id="formulario" class="formulario-oculto">
         <p id="mensajeRegistroLogin" class="dark-text"></p>
-        <input type="text" id="username" placeholder="Nombre de usuario" autocomplete="additional-name">
-        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" id="username" placeholder="Nombre de usuario" data-placeholder-es="Nombre de usuario"
+          data-placeholder-en="Username" autocomplete="additional-name">
+        <input type="password" id="password" placeholder="Contraseña" data-placeholder-es="Contraseña"
+          data-placeholder-en="Password">
         <p id="mensaje-registro" class="dark-text"></p>
         <p id="mensaje-login" class="dark-text"></p>
-        <button id="submitButton">Aceptar</button>
+        <button id="submitButton" data-es="Aceptar" data-en="Submit">Aceptar</button>
       </div>
     </div>
 
 
     <nav class="header-lower containerbox">
       <ul>
-        <li><a id="header-lower-peliculas">Peliculas</a></li>
+        <li><a id="header-lower-peliculas" data-es="Peliculas" data-en="Movies">Peliculas</a></li>
         <li><a id="header-lower-serie">TV Shows</a></li>
         <li><a id="header-lower-anime">Anime</a></li>
         <li><a id="header-lower-kdrama">Kdramas</a></li>
         <li><a id="header-lower-popular">Popular🔥</a></li>
-        <li><a id="header-lower-lo-nuevo">Lo Nuevo</a></li>
-        <li><a id="ocultar-resultados">Ocultar Titulos</a></li>
+        <li><a id="header-lower-lo-nuevo" data-es="Lo Nuevo" data-en="New">Lo Nuevo</a></li>
+        <li id="liOcultarTitulos"><a id="ocultar-resultados" data-es="Ocultar Titulos" data-en="Hide Titles">Ocultar
+            Titulos</a></li>
       </ul>
 
       <div class="main-searchbar-wrapper">
         <label for="title"></label>
-        <input type="search" id="title" placeholder="buscá cualquier título">
-        <button id="tituloButton">Buscar</button>
+        <input type="search" id="title" placeholder="Buscá cualquier título"
+          data-placeholder-es="Buscá cualquier título" data-placeholder-en="Search by title">
+        <button id="tituloButton" data-es="Buscar" data-en="Search">Buscar</button>
       </div>
     </nav>
   </header>
@@ -59,7 +66,8 @@
 
       <div id="main-container">
         <div>
-          <label for="genre">filtrar por género:</label>
+          <label for="genre" id="filtrarPorGenero" data-es="Filtrar por género" data-en="Filter by genre">Filtrar por
+            género:</label>
           <select id="genre">
             <option value="Drama">Drama</option>
             <option value="Romance">Romance</option>
@@ -69,11 +77,13 @@
             <option value="Ciencia Ficcion">Ciencia Ficción</option>
             <option value="Accion">Acción</option>
           </select>
-          <button id="generoButton">Filtrar</button>
+          <button id="generoButton" data-es="Filtrar" data-en="Filter">Filtrar</button>
         </div>
 
         <div class="divYearButton">
-          <button id="yearButton">Mostrar series y películas por año de lanzamiento</button>
+          <button id="yearButton" data-es="Mostrar series y películas por año de lanzamiento"
+            data-en="Show TV Shows and Movies in release order">Mostrar
+            series y películas por año de lanzamiento</button>
         </div>
 
       </div>
@@ -82,7 +92,8 @@
 
 
       <div class="api-tmdb">
-        <input type="text" id="search-input" placeholder="BUSCAR EN EL API DE TMDB CUALQUIER COSA">
+        <input type="text" id="search-input" placeholder="Buscar en la API de TMDB"
+          data-placeholder-en="Search in TMDB API" data-placeholder-es="Buscar en la API de TMDB">
         <div id="autocomplete-results"></div>
 
         <div id="searchResults"></div>
@@ -99,6 +110,7 @@
   <script src="./scripts/registro.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./scripts/api.js" type="module"></script>
+  <script src="./scripts/idioma.js" type="module"></script>
 </body>
 
 </html>

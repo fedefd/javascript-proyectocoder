@@ -60,6 +60,11 @@ function signUp(username, password) {
 
   limpiarMensajeRegistro();
 
+  if (!username.trim()) {
+    document.getElementById('mensaje-registro').innerText = 'El nombre de usuario no puede estar vacío.';
+    return;
+  }
+
   if (existingUser) {
     document.getElementById('mensaje-registro').innerText = 'El usuario ya existe. Por favor, elige otro nombre de usuario.';
   } else {

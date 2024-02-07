@@ -86,12 +86,14 @@ header .header-upper ul li a {
 }
 header #signupButton,
 header #loginButton,
+header #languageButton,
 header #borrarLocalStorageButton {
   border: 2px solid transparent;
   transition: border 0.3s ease;
 }
 header #signupButton:hover,
 header #loginButton:hover,
+header #languageButton:hover,
 header #borrarLocalStorageButton:hover {
   border: 2px solid white;
 }

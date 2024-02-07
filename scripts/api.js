@@ -56,8 +56,12 @@ function displayResults(results) {
 }
 
 function showMovieDetails(movieId) {
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=es-ES`;
-  axios.get(url)
+  const esLang = document.documentElement.lang === 'es';
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+  const urlEs = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=es-ES`;
+  const requestUrl = esLang ? urlEs : url;
+
+  axios.get(requestUrl)
     .then(response => {
       const movie = response.data;
       const detailsContainer = document.createElement('div');
@@ -70,7 +74,7 @@ function showMovieDetails(movieId) {
         <p><strong>Géneros:</strong> ${movie.genres.map(genre => genre.name).join(', ')}</p>
         <p><strong>Calificación:</strong> ${Math.round(movie.vote_average)}/10</p>
         <p><strong>Número de votos:</strong> ${movie.vote_count}</p>
-        <p><strong>Duración:</strong> ${movie.runtime} minutos</p>
+        <p><strong>Duración:</strong> ${movie.runtime} mins</p>
         <p><strong>Países de producción:</strong> ${movie.production_countries.map(country => country.name).join(', ')}</p>
         <p><strong>Compañías de producción:</strong> ${movie.production_companies.map(company => company.name).join(', ')}</p>
         ${movie.homepage ? `<p><strong>Enlace a la página oficial:</strong> <a href="${movie.homepage}" target="_blank">${movie.title} - Página oficial</a></p>` : ''}
