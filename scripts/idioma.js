@@ -35,12 +35,11 @@ function changeLanguage(language) {
     headerLowerPeliculas.textContent = headerLowerPeliculas.getAttribute('data-es');
     headerLowerLoNuevo.textContent = headerLowerLoNuevo.getAttribute('data-es');
     ocultarTitulos.textContent = ocultarTitulos.getAttribute('data-es');
-
     filtrarPorGenero.textContent = filtrarPorGenero.getAttribute('data-es');
     tituloButton.textContent = tituloButton.getAttribute('data-es');
     generoButton.textContent = generoButton.getAttribute('data-es');
     yearButton.textContent = yearButton.getAttribute('data-es');
-    ocultarTitulos.textContent = ocultarTitulos.getAttribute('data-es');
+
     addXSpan()
   } else if (language === 'en') {
     changeLanguageButton.textContent = changeLanguageButton.getAttribute('data-en');
@@ -54,12 +53,11 @@ function changeLanguage(language) {
     headerLowerPeliculas.textContent = headerLowerPeliculas.getAttribute('data-en');
     headerLowerLoNuevo.textContent = headerLowerLoNuevo.getAttribute('data-en');
     ocultarTitulos.textContent = ocultarTitulos.getAttribute('data-en');
-
     filtrarPorGenero.textContent = filtrarPorGenero.getAttribute('data-en');
     tituloButton.textContent = tituloButton.getAttribute('data-en');
     generoButton.textContent = generoButton.getAttribute('data-en');
     yearButton.textContent = yearButton.getAttribute('data-en');
-    ocultarTitulos.textContent = ocultarTitulos.getAttribute('data-en');
+
     addXSpan()
   }
 }
