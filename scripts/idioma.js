@@ -4,6 +4,7 @@ const changeLanguageButton = document.getElementById('languageButton');
 
 
 function changeLanguage(language) {
+  const options = document.querySelectorAll('#genre option');
   const filtrarPorGenero = document.getElementById('filtrarPorGenero');
   const ocultarTitulos = document.getElementById('ocultar-resultados');
   const headerLowerLoNuevo = document.getElementById('header-lower-lo-nuevo');
@@ -16,8 +17,12 @@ function changeLanguage(language) {
       input.placeholder = input.getAttribute('data-placeholder-es');
     }
   });
+  options.forEach(option => {
+    const text = language === 'en' ? option.getAttribute('data-en') : option.getAttribute('data-es');
+    option.textContent = text;
+  });
 
-  // Actualizar el contenido del elemento de saludo según el idioma seleccionado
+
   if (language === 'es') {
     changeLanguageButton.textContent = changeLanguageButton.getAttribute('data-es');
     languageButton.textContent = languageButton.getAttribute('data-es');
