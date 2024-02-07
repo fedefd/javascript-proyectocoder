@@ -104,7 +104,12 @@ function ordenarPorAño() {
 
 export function mostrarResultado(resultado) {
   const resultContainer = document.getElementById('result-container');
+  const resultAutoComplete = document.getElementById('autocomplete-results');
+  const resultSearch = document.getElementById('searchResults');
+  resultSearch.innerHTML = '';
+  resultAutoComplete.innerHTML = '';
   resultContainer.innerHTML = '';
+  document.getElementById('searchResults').classList.remove('search-results-active');
 
   if (resultado.length === 0) {
     resultContainer.innerText = "No se encontraron resultados.";
@@ -144,7 +149,12 @@ function ocultarResultados() {
 function mostrarResultadoConAño(resultado) {
   const elementosLiHeaderLower = document.querySelectorAll('.header-lower ul li');
   const resultContainer = document.getElementById('result-container');
+  const resultAutoComplete = document.getElementById('autocomplete-results');
+  const resultSearch = document.getElementById('searchResults');
+  resultSearch.innerHTML = '';
+  resultAutoComplete.innerHTML = '';
   resultContainer.innerHTML = '';
+  document.getElementById('searchResults').classList.remove('search-results-active');
 
   if (resultado.length === 0) {
     resultContainer.innerText = "No se encontraron resultados.";

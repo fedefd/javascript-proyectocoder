@@ -2,6 +2,8 @@ const apiKey = '7b8f76ae237b7a0933842eb787e44804';
 
 const headerLowerPopular = document.getElementById('header-lower-popular');
 const headerLowerLoNuevo = document.getElementById('header-lower-lo-nuevo');
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('searchResults');
 
 headerLowerPopular.addEventListener('click', showPopularMovies);
 headerLowerLoNuevo.addEventListener('click', showUpcomingMovies);
@@ -49,6 +51,8 @@ function displayResults(results) {
   });
   searchResultsDiv.appendChild(ul);
   document.getElementById('searchResults').classList.add('search-results-active');
+  const resultContainer = document.getElementById('result-container');
+  resultContainer.innerHTML = '';
 }
 
 function showMovieDetails(movieId) {
@@ -75,6 +79,14 @@ function showMovieDetails(movieId) {
 
   document.getElementById('search-input').value = '';
 }
+
+
+searchInput.addEventListener('input', function () {
+
+  if (searchInput.value.trim() === '') {
+    searchResults.classList.remove('search-results-active');
+  }
+});
 
 function displayMessage(message) {
   document.getElementById('searchResults').innerHTML = `<p>${message}</p>`;
